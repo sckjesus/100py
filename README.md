@@ -17,3 +17,5 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/sckjesus/100py.git
 git push -u origin main
+
+http://guides.beanstalkapp.com/version-control/common-git-commands.html
