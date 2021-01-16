@@ -14,8 +14,12 @@ def guesser():
             elif int(b)<a:
                 print("The number is higher than that")
             b=input("Try again: ")
-        print("Correct!!!")
-        print("Congratulations!")
-        print("Woohoooo!!!")
-        guesser()
+            if str(b)=="stop":
+                break
+            if b.isdigit():
+                if int(b)==a:
+                    print("Correct!!!")
+                    print("Congratulations!")
+                    print("Woohoooo!!!")
+                    guesser()
 guesser()
