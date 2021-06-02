@@ -1,16 +1,17 @@
-import time
-import os
-from flask import Flask, request
-# from werkzeug.middleware.proxy_fix import ProxyFix
+import sys, time, os
 
-app = Flask(__name__)
-
-
-
+write = sys.stdout.write
 
 def mungusaser():
-
-    q = input('What is your username?: ')    
+    print("Loading...")
+    for i in range(10):
+        time.sleep(1)   
+        write('\b')
+    os.system('cls')
+    print("Thanks for waiting!")
+    time.sleep(1)
+    os.system('cls')
+    q=input('What is your username?: ')    
     c=["sanitha", "grapesK", "momosa", "nothing", "mookers" ]
     d=["bookman.kaspar/bookgen", "book.com", "seetha.o/momaseetha", "onum/illai", "blue"]
     if str(q) in c:
@@ -42,14 +43,9 @@ def mungusaser():
                 if str(b) in d:
                     print("Welcome "+str(q.capitalize())+"!")
             else:
-                print("Sorry, that's not coorect, bye!")
-    return "gfnv"
+                print("Sorry, that's not corect, bye!")
             
-# mungusaser()
+mungusaser()
 
 
 
-@app.route("/")
-def rty():
-    return mungusaser()
-app.run(debug=True) 
