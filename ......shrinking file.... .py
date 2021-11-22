@@ -1,7 +1,7 @@
 import random 
 from random import randint
 def guesser():
-    a=randint(1,10000)
+    a=randint(1,100)
     print("now...")
     
     print("Lets play the number guessing game!")

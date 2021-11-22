@@ -82,9 +82,9 @@ def mungusaser():
                 print("Welcome "+q+"!")
         
             else:
-                print("Sorry, that's not corect. Unfortunately you are now locked out!")
+                print("Sorry, that's not correct. Unfortunately you are now locked out!")
         else:
-            print("Sorry, that's not corect. Unfortunately you are now locked out!")
+            print("Sorry, that's not correct. Unfortunately you are now locked out!")
 mungusaser()
 
 
