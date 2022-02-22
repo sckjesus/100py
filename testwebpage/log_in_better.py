@@ -11,12 +11,11 @@ def nothin():
 #---------------------------------------------------------------------------------------
 @app.route("/sign_in",methods = ['POST', 'GET'])
 def tell_them():
-    if request.method == 'POST':
-        username = request.form['username']
+    username=request("username", render_template("user.html"))
+    if username in listofusers:
         return redirect("http://127.0.0.1:5000/sign_in/"+str(username))
     else:
-        username = request.args.get('username')
-        return redirect("http://127.0.0.1:5000/sign_in/"+str(username))
+        return redirect("http://127.0.0.1:5000/sign_in")
 
 #---------------------------------------------------------------------------------------
 @app.route("/sign_in/<username>")
@@ -24,7 +23,7 @@ def hello_user(username):
     if str(username) in listofusers:
         return redirect("/sign_in/"+str(username)+"/pass_please")
     else:
-        return "Sorry, that was wrong.   <a href='http://127.0.0.1:5000/'> Click this! </a> "  
+        return "Sorry, that was wrong.   <a href='http://127.0.0.1:5000/'> Click this... </a> "  
 #---------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------
 @app.route("/sign_in/sanitha/pass_please")

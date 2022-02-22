@@ -5,9 +5,13 @@
 <body bgcolor="black">
     <h1 align = "center"><font color="white"><big>Nice job!</big></font></h1>
     <h3 align = "center"><font color="white"><b>Great!<b> Type your </font><font color="lime"><big>password</big></font><font color="white"> in the textbox below ⤦ and click "Submit"</font></h3>
-        <form action = "http://localhost:5000/sign_in/username/pass_please/passwerdd" method = "post">
-            <p align = "center"><font color="white">Enter Password: </font><input type = "text" name = "password" /></p>
-            <p align="center"><input type = "submit" value = "Submit" /></p>
-         </form>
+    <script>    
+        import { username } from 'user.html'
+        linkery="http://localhost:5000/sign_in/"+username+"/pass_please/"+passwerdd
+    </script>
+    <form action = linkery>
+        <p align = "center"><font color="white">Enter Password: </font><input type = "text" name = "passwerdd" /></p>
+        <p align="center"><input type = "submit" value = "Submit" /></p>
+    </form>
 </body>
 </html>
