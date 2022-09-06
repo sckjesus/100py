@@ -1,16 +1,358 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Marked in the browser</title>
-</head>
-<body>
-  <div id="content">**wasup**</div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    ghf = "**ghj**"
-    document.getElementById('content').innerHTML =
-      marked.parse(ghf);
-  </script>
-</body>
-</html>
+<div class="grid gap-x-5 grid-cols-6 mt-8 xl:w-11/12 lg:w-11/12 mx-auto relative">
+  <div class="relative flex-col col-span-6 lg:col-span-2 h-full">
+    <div class="flex-col px-2 rounded-3xl bg-white pt-2 pb-8">
+      <div class="ml-8 relative z-10">
+        <div class="text-4xl font-semibold text-gray-600 mt-4">
+          Welcome,
+        </div>
+      </div>
+      <div class="ml-8 relative z-10">
+        <!-- <div class="sm:block md:block lg:flex xl:flex pt-2 px-1">
+                  <div class="grid place-content-center align-middle w-fill y-full"><img src="<%= user.img %>" alt="" class="rounded-full mr-6 w-10 h-10 align-middle hover:outline-none hover:scale-105 hover:-translate-y-2 transition ease-in-out duration-300 delay-75"></div>
+
+                  <div
+                      class="break-words mt-1 xl:mt-0 text-4xl 2xl:text-5xl font-bold text-gray-700 underline-offset-1 underline decoration-transparent hover:decoration-gray-200 transition-all ease-in-out delay-75 duration-300">
+                      <%= user.username %>
+
+                  </div>
+              </div> -->
+        <div class="sm:block md:block lg:flex xl:flex pt-2 px-1">
+          <div class="grid place-content-center align-middle w-fill y-full"><img
+              src="https://s.gravatar.com/avatar/a0e6e8c282a3953d22f0f0d1ee267910?s=200&amp;r=x" alt=""
+              class="rounded-full mr-6 w-10 h-10 align-middle hover:outline-none hover:scale-105 hover:-translate-y-2 transition ease-in-out duration-300 delay-75">
+          </div>
+          <div
+            class="break-words mt-1 xl:mt-0 text-4xl 2xl:text-5xl font-bold text-gray-700 underline-offset-1 underline decoration-transparent hover:decoration-gray-200 transition-all ease-in-out delay-75 duration-300"
+            style="word-break:break-word">
+            werf3etfw3efg24s
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="inline-block py-2 items-baseline">
+            <div
+              class="group flex text-3xl font-bebas text-gray-700 hover:translate-x-4 transition-transform delay-75 duration-700 ease-in-out">
+              Level <%= user.level %>
+                <% if(nextLevel <=7) { %>
+
+
+            </div>
+            <div
+              class="font-bold text-2xl hover:translate-x-6 hover:scale-110 transition-transform delay-75 duration-500 ease-in-out  text-green-400   ">
+              5,989,503
+              PTS.
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between">
+          <div class="w-1/2">
+            <p id="Great Question" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-yellow-500 decoration-2 font-semibold">
+              Great Question
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Great Answer" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-yellow-500 decoration-2 font-semibold">
+              Great Answer
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Socratic" style="opacity: 1;"
+              class="text-opacity-45 text-lg w-min min-w-max max-w-full text-yellow-500 decoration-2 font-semibold font-bold">
+              Socratic
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Zombie" style="opacity: 30%;"
+              class="text-opacity-45 text-lg w-min min-w-max max-w-full text-yellow-500 decoration-2 font-semibold">
+              Zombie
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Good Question" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-gray-600 decoration-2 font-semibold">
+              Good Question
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Good Answer" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-gray-600 decoration-2 font-semibold">
+              Good Answer
+            </p>
+          </div>
+          <div class="w-1/32">
+            <p id="Inquisitive" style="opacity: 1;"
+              class="text-lg w-min min-w-max max-w-full text-gray-600 decoration-2 font-semibold font-bold">
+              Inquisitive
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Protected" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-gray-600 decoration-2 font-semibold">
+              Protected
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Nice Question" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-orange-900 decoration-2 font-semibold">
+              Nice Question
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Nice Answer" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-orange-900 decoration-2 font-semibold">
+              Nice Answer
+            </p>
+          </div>
+          <div class="w-1/32">
+            <p id="Curious" style="opacity: 1;"
+              class="text-lg w-min min-w-max max-w-full text-orange-900 decoration-2 font-semibold font-bold">
+              Curious
+            </p>
+          </div>
+          <div class="w-1/2">
+            <p id="Scholar" style="opacity: 30%;"
+              class="text-lg w-min min-w-max max-w-full text-orange-900 decoration-2 font-semibold">
+              Scholar
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex ml-8 justify-start lg:hidden">
+        <div class="flex-col justify-start">
+          <form action="./email" method="POST"
+            class="flex group mt-2 items-center transition-all delay-75 duration-300 ease-in-out">
+            <input type="hidden" name="username" value="werf3etfw3efg24s ">
+            <input type="submit"
+              class="cursor-pointer text-sm font-bold text-gray-600 group-hover:scale-105 group-hover:border-b-2 group-hover:border-gray-300 group-hover:text-gray-700 transition-all delay-75 duration-300 ease-in-out"
+              value="Change Email">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-8 w-8 stroke-gray-500" fill="none" viewBox="0 0 24 24"
+              stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+          </form>
+          <form action="./password" method="POST"
+            class="flex group mt-1 items-center transition-all delay-75 duration-300 ease-in-out">
+            <input type="hidden" name="username" value="werf3etfw3efg24s ">
+            <input type="submit"
+              class="cursor-pointer text-sm text-md font-bold text-gray-600 group-hover:scale-105 group-hover:border-b-2 group-hover:border-gray-300 group-hover:text-gray-700 transition-all delay-75 duration-300 ease-in-out"
+              value="Change Password">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-8 w-8 stroke-gray-500" fill="none" viewBox="0 0 24 24"
+              stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
+              </path>
+            </svg>
+          </form>
+          <form action="./deleteAccount" method="POST" class="flex group mt-2">
+            <input type="hidden" name="username" value="werf3etfw3efg24s ">
+            <input value="Delete Account" type="submit"
+              class="cursor-pointer text-base font-bold text-white px-2 py-1 bg-rose-500 rounded-md group-hover:bg-pink-600 transition-all delay-75 duration-300 ease-in-out hover:ring-2 hover:ring-red-400 hover:ring-offset-1">
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flex-col h-min col-span-6 lg:col-span-3 px-2 rounded-3xl bg-white pt-2 pb-8 mt-4">
+    <div class="ml-4 z-10 px-4 mt-4">
+      <div class="inline-block pt-2 pb-6">
+        <div class="text-4xl font-bold text-gray-700 border-b-2 pb-1 border-blue-100 ">
+          Privileges:
+        </div>
+        <div class="text-xl mt-2 font-semibold list-decimal text-gray-700">
+
+
+          <li>Create new answers</li>
+
+          <li>Upvote questions and answers</li>
+
+          <li>Comment under all questions and answers</li>
+
+          <li>Create bounties</li>
+
+          <li>Downvote questions and answers</li>
+
+          <li>View the upvotes/downvotes of any question or answer</li>
+
+          <li>Participate in edit votes</li>
+
+          <li>Participate in Protection votes</li>
+
+          <li>Close and Reopen Quesitons</li>
+
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <div class="ml-6 inline-block mx-auto break-words">
+      <div class="text-xl font-semibold text-gray-700 pb-1">
+        <span class=" font-bold">Email:</span> rfsrfrfsr@rtdrtd.coms
+      </div>
+      <div class="text-xl font-semibold text-gray-700 pb-1 ">
+        <span class=" font-bold">Questions:</span> 15
+      </div>
+      <div class="text-xl font-semibold text-gray-700 pb-1">
+        <span class=" font-bold">Answers:</span> 1
+      </div>
+    </div>
+  </div>
+  <div class="hidden lg:block col-span-1 relative h-min">
+    <div class="flex justify-end">
+      <div class="flex-col justify-end">
+        <img src="https://s.gravatar.com/avatar/a0e6e8c282a3953d22f0f0d1ee267910?s=200&amp;r=x" alt=""
+          class="ml-auto rounded-full w-14 h-14 mr-6 mt-6 bg-white px-2 py-2 border-4 hover:scale-105 hover:-translate-y-2 transition ease-in-out duration-300 delay-75">
+        <form action="./email" method="POST"
+          class="flex group mt-2 items-center justify-end mr-2 hover:border-r-8 hover:border-blue-300 transition-all delay-75 duration-300 ease-in-out">
+          <input type="hidden" name="username" value="werf3etfw3efg24s ">
+          <input type="submit"
+            class="cursor-pointer text-xs font-bold text-white group-hover:scale-105 group-hover:border-b-2 group-hover:border-gray-100  transition-all delay-75 duration-300 ease-in-out"
+            value="Change Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-8 w-8 mr-4 stroke-white" fill="none" viewBox="0 0 24 24"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+            </path>
+          </svg>
+        </form>
+        <form action="./password" method="POST"
+          class="flex group mt-2 items-center justify-end mr-2 hover:border-r-8 hover:border-blue-300 transition-all delay-75 duration-300 ease-in-out">
+          <input type="hidden" name="username" value="werf3etfw3efg24s ">
+          <input type="submit"
+            class="cursor-pointer text-xs font-bold text-white group-hover:scale-105 group-hover:border-b-2 group-hover:border-gray-100  transition-all delay-75 duration-300 ease-in-out"
+            value="Change Password">
+          &hairsp;
+          &hairsp;
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">
+            </path>
+          </svg>
+        </form>
+        <form onsubmit="return confirm('Do you really want to delete your account?\nThis cannot be undone.');"
+          action="./deleteAccount" method="POST" class="flex group mt-2 justify-end mr-6">
+          <input type="hidden" name="username" value="werf3etfw3efg24s ">
+          <input value="Delete Account" type="submit"
+            class="cursor-pointer text-base font-bold text-white px-2 py-1 bg-rose-500 rounded-md group-hover:bg-pink-600 transition-all delay-75 duration-300 ease-in-out hover:ring-2 hover:ring-red-400 hover:ring-offset-1">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="ml-2 relative w-max">
+    <p class="font-bold text-5xl text-white">
+      Your Activity:
+    </p>
+  </div>
+  <div class="col-span-6 lg:col-span-5">
+    <div class="relative flex-col">
+      <div class="flex z-10">
+
+        <div class="flex-col w-1/2 py-1 mr-4 bg-white rounded-3xl shadow-2xl shadow-indigo-600 mt-6">
+          <p class="ml-6 mt-4 text-gray-700 font-semibold text-3xl">
+            Questions
+          </p>
+          <div class="flex-col mt-4 mb-8 overflow-y-auto max-h-80" id="questionFeed">
+            <div onclick="location.href = '/question/62e7dedeff0ee456f1152b50'"
+              class="ml-6 cursor-pointer hover:-translate-y-1 kindagray hover:scale-105 delay-75 duration-300 ease-in-out my-5 bg-white rounded overflow-hidden shadow-lg w-4/5"
+              style="word-break:break-word">
+              <div class="px-4 py-4">
+                <div class="hidden questionId">62e7dedeff0ee456f1152b50</div>
+                <div class="font-bold text-lg text-black mb-2">jsxkwxjhkgxkwjhs</div>
+              </div>
+              <div class="pl-3 pr-6 pt-4 pb-2 ">
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">By: werf3etfw3efg24s </span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">17d ago</span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">0 pts.</span>
+              </div>
+            </div>
+            <div onclick="location.href = '/question/62e650584cb46bf35f889b53'"
+              class="ml-6 cursor-pointer hover:-translate-y-1 kindagray hover:scale-105 delay-75 duration-300 ease-in-out my-5 bg-white rounded overflow-hidden shadow-lg w-4/5"
+              style="word-break:break-word">
+              <div class="px-4 py-4">
+                <div class="hidden questionId">62e650584cb46bf35f889b53</div>
+                <div class="font-bold text-lg text-black mb-2">
+                  setrsersrere4tl;gjbsfvjkbnsfijogberihfgberhfbv3rberfbvuhv3brhfvberfvberhfvbuhervb</div>
+              </div>
+              <div class="pl-3 pr-6 pt-4 pb-2 ">
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">By: werf3etfw3efg24s </span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">18d ago</span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">0 pts.</span>
+              </div>
+            </div>
+            <div onclick="location.href = '/question/62e6504c4cb46bf35f889b4f'"
+              class="ml-6 cursor-pointer hover:-translate-y-1 kindagray hover:scale-105 delay-75 duration-300 ease-in-out my-5 bg-white rounded overflow-hidden shadow-lg w-4/5"
+              style="word-break:break-word">
+              <div class="px-4 py-4">
+                <div class="hidden questionId">62e6504c4cb46bf35f889b4f</div>
+                <div class="font-bold text-lg text-black mb-2">
+                  setrsersrere4tl;gjbsfvjkbnsfijogberihfgberhfbv3rberfbvuhv3brhfvberfvberhfvbuhervb</div>
+              </div>
+              <div class="pl-3 pr-6 pt-4 pb-2 ">
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">By: werf3etfw3efg24s </span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">18d ago</span>
+                <span class="badge tag font-semibold text-gray-700 mr-2 mb-2">0 pts.</span>
+              </div>
+            </div>
+            <div class="ml-6 flex">
+              <div class="flex mt-4">
+                <span
+                  class="rounded-lg flex justify-between px-2 py-2 text-gray-500 bg-gray-300 hover:ring-2 hover:ring-offset-1 hover:ring-gray-300 hover:text-gray-700 w-max">
+                  <button class=" text-gray-500 font-semibold text-base"
+                    onclick="loadMore(3, '62e6504c4cb46bf35f889b4f')">
+                    Load More
+                  </button>
+                </span>
+              </div>
+              <div class="flex mt-4">
+                <span
+                  class="rounded-lg flex justify-between ml-8 px-2 py-2 text-gray-500 bg-gray-300 hover:ring-2 hover:ring-offset-1 hover:ring-gray-300 hover:text-gray-700 w-max">
+                  <button class=" text-gray-500 font-semibold text-base" onclick="loadLess(3)">
+                    Load Less
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-col w-1/2 py-1 bg-white rounded-3xl shadow-2xl shadow-indigo-600 mt-6">
+          <p class="ml-6 mt-4 text-gray-700 font-semibold text-3xl">
+            Answers
+          </p>
+          <div class="flex-col mt-4 mb-8 overflow-y-auto max-h-80" id="answerFeed">
+            <div onclick="location.href='/question/62e3d9abe36f3fcbda116181'"
+              class="kindagray cursor-pointer hover:-translate-y-1 hover:scale-105 delay-75 duration-300 ease-in-out my-5 ml-6 bg-white rounded overflow-hidden shadow-lg w-4/5">
+              <div class="px-4 py-4 ">
+                <div class="text-base font-semibold mb-2"><span class="font-bold text-red-500"></span></div>
+                <p class="font-bold text-gray-700 text-xl w-5/6">
+                </p>
+                <h1 id="djssgkdjfhgjhh">djssgkdjfhgjhh</h1>
+                <h2 id="jhzdg">jhzdg</h2>
+                <p><em>sdfd</em></p>
+
+                <p></p>
+              </div>
+              <div class="pl-3 pr-6 pt-4 pb-2 ">
+                <span class="badge font-semibold text-gray-700 tag mr-2 mb-2">By: werf3etfw3efg24s </span>
+                <span class="badge font-semibold text-gray-700 tag mr-2 mb-2">19d ago</span>
+                <span class="badge font-semibold text-gray-700 tag mr-2 mb-2">0 pts.</span>
+              </div>
+            </div>
+            <div class="flex-col">
+              <div id="noQuestions" class="mt-4 text-gray-500 text-center font-semibold text-xl">
+                That's all folks!
+                <br>...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
